@@ -1,8 +1,16 @@
-herbstschule2014
-================
+---
+title: Fall School in "Advanced Statistical Methods"
+author: Phillip Alday
+date: OCtober 2014 
+---
 
-Ein Crash-Kurs in Statistik mit einem Fokus auf Erwartungswert und Modelle
+# Goal and Purpose
+Ein Crash-Kurs in Statistik mit einem Fokus auf Erwartungswert und Modelle.
 
+# Plan
+
+
+# Quotes
 
 To call in the statistician after the experiment is done may be no more than asking him to perform a post-mortem examination: he may be able to say what the experiment died of.
 ~ Sir Ronald Aylmer Fisher
