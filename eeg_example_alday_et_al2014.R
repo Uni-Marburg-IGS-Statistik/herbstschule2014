@@ -16,5 +16,16 @@ rm("eeg.item.data")
 # and free up memory not currently being used ("garbage collect")
 gc()
 
-big.model <- lmer(mean ~ ambiguity*wordOrder*np1type*np2type + (1|subj) + (1|item), data=cz)
-massive.model <- lmer(mean ~ ambiguity*wordOrder*np1type*np2type + (1+ambiguity*wordOrder*np1type*np2type|subj) + (1+ambiguity*wordOrder*np1type*np2type|item), data=cz)
+
+cz.n400 <- subset(cz, win=="N400")
+
+big.model <- lmer(mean ~ ambiguity*wordOrder*np1type*np2type 
+                      + (1|subj) 
+                      + (1|item) 
+                  ,data=cz.n400
+                  ,REML=FALSE)
+massive.model <- lmer(mean ~ ambiguity*wordOrder*np1type*np2type
+                          + (1+ambiguity*wordOrder*np1type*np2type|subj)
+                          + (1+ambiguity*wordOrder|item)
+                      ,data=cz.n400
+                      ,REML=FALSE)
